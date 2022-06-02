@@ -1,5 +1,5 @@
 grade = int(input("Enter student grade: "))
-if grade >= 70:
+if 70 <= grade <= 100:
     print("A")
 if 60 <= grade <= 69:
     print("B")
