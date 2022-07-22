@@ -3,6 +3,10 @@ class Person:
         self._name = name
         self._age = age
 
+    @classmethod
+    def get_number_of_persons(cls):
+        return cls.get_number_of_persons
+
     @property
     def name(self):
         return self._name
@@ -27,8 +31,8 @@ class Person:
         self._age = new_age
 
 
-person1 = Person("Abigail",33)
-person2 = Person("Dorcas",56)
+person1 = Person("Abigail", 33)
+person2 = Person("Dorcas", 56)
 
 print(person1.name)
 person1.name = "Ola"
@@ -36,3 +40,4 @@ person1.name = "Ola"
 del person1.name
 print(person1.name)
 print(dir(person1))
+
