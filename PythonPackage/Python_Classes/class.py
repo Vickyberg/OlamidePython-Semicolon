@@ -8,6 +8,4 @@ class MaxBasketSize:
         if len(self.basket) > self.size:
             self.basket.pop(0)
 
-    @property
-    def items(self):
-        return self.basket
+    
