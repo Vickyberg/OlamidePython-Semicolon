@@ -11,6 +11,9 @@ class MyTestCase(unittest.TestCase):
     def tearDown(self) -> None:
         print("runs after all")
 
+    def test_for_error(self):
+        self.assertRaisesRegex(TypeError, "anything", utils.add, "4", 2)
+
     def test_something(self):
         self.assertEqual(True, True)
 
