@@ -4,15 +4,17 @@
 #         self.age = age
 #         self.gender = gender
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
-@dataclass
+@dataclass(order=True)
 class Human:
     name: str
-    age: int
-    gender: str
+    age: int = field(default=0)
+    gender: str = field(default='F')
+    children: list[str] = field(default_factory=lambda: [], init=False, repr=False)
 
 
 human = Human("Ololade", 24, "F")
-print(human)
+alien = Human("Boyo", 45, "M")
+print(human < alien)
